@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    align-items: center;  /* Center logo and text vertically */
+    justify-content: space-between;
+    background-color: #343232;
+    color: white;
+    padding: 15px 30px;
+}
+
+/* Logo and Brand Name */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between logo and brand name */
+}
+
+.logo {
+    width: 120px; /* Adjust size */
+    height: auto;
+    display: block;
+}
+
+/* Brand Name & Tagline */
+/* Brand Name & Tagline */
+.brand {
+    display: flex;
+    align-items: center; /* Aligns name and tagline horizontally */
+}
+
+.brand-name {
+    font-size: 36px; /* Increased size of Kharens AI */
+    font-weight: bold;
+    color: white;
+}
+
+.tagline {
+    font-size: 20px; /* Bigger tagline, but smaller than Kharens AI */
+    font-style: italic;
+    color: #ffffff;
+    margin-left: 35px; /* Push tagline further right */
+}
+
+
+
+/* Navigation Menu */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: block;
+}
+
+/* Ensure the dropdown works */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    list-style: none;
+    min-width: 200px;
+    top: 100%;
+    left: 0;
+    padding: 0;
+    border-radius: 5px;
+    z-index: 1000; /* Ensures it stays on top */
+}
+
+.dropdown-menu li {
+    border-bottom: 1px solid #555;
+}
+
+.dropdown-menu li a {
+    padding: 10px;
+    display: block;
+    color: white;
+}
+
+/* Fix dropdown hover issue */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #555;
+}

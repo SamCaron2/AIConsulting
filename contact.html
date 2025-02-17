@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Atreus AI</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo-container">
+            <img src="images/cleaned_image.png" alt="AI Consulting Logo" class="logo">
+            <span class="brand-name">Atreus AI</span>
+            <span class="tagline">"Helping Small Businesses Automate, Optimize, and Grow with AI"</span>
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Form Section -->
+    <section class="contact">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Fill out the form below, and we’ll get back to you with pricing and consultation details.</p>
+
+            <form action="submit_form.php" method="POST" class="contact-form">
+                <!-- Name -->
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" required>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+
+                <!-- Company (Optional) -->
+                <div class="form-group">
+                    <label for="company">Company Name (Optional)</label>
+                    <input type="text" id="company" name="company" class="form-control" placeholder="Your company name">
+                </div>
+
+                <!-- Services Interested In -->
+                <div class="form-group">
+                    <label for="services">What services are you interested in?</label>
+                    <select id="services" name="services" class="form-control" required>
+                        <option value="" disabled selected>Select a service</option>
+                        <option value="AI Training & Education">AI Training & Education</option>
+                        <option value="AI Automation & Workflow Optimization">AI Automation & Workflow Optimization</option>
+                        <option value="Custom AI Solutions & Integrations">Custom AI Solutions & Integrations</option>
+                        <option value="General Consultation">General Consultation</option>
+                    </select>
+                </div>
+
+                <!-- Message Box -->
+                <div class="form-group">
+                    <label for="message">Additional Details</label>
+                    <textarea id="message" name="message" class="form-control" rows="5" placeholder="Tell us more about your needs..."></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Menu</h5>
+                    <ul class="footer-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <p>Email: <a href="mailto:atreusconsultinggroup@gmail.com">atreusconsultinggroup@gmail.com</a></p>
+                    <p>Phone: +1 763-496-8120</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Atreus AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS File -->
+    <script src="script.js"></script>
+</body>
+</html>

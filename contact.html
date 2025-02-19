@@ -19,65 +19,95 @@
     <header>
         <div class="logo-container">
             <img src="images/cleaned_image.png" alt="AI Consulting Logo" class="logo">
-            <span class="brand-name">Atreus AI</span>
+            <span class="brand-name">Atreus Consulting</span>
             <span class="tagline">"Helping Small Businesses Automate, Optimize, and Grow with AI"</span>
         </div>
         <nav>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#">Services &#9662;</a> <!-- Updated Dropdown -->
+                    <ul class="dropdown-menu">
+                        <li><a href="services.html#ai-consulting">AI Consulting & Automation</a></li>
+                        <li><a href="services.html#chatbot-development">Chatbot Creation & Customization</a></li>
+                        <li><a href="services.html#business-efficiency">AI for Business Efficiency</a></li>
+                        <li><a href="services.html#ai-marketing">AI for Marketing & Content</a></li>
+                        <li><a href="services.html#custom-ai">Custom AI Solutions</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Contact Form Section -->
-    <section class="contact">
+    <!-- Hero Section with Background Image -->
+    <!-- Contact Header Section -->
+    <section class="contact-header">
+        <h1>Get In Touch With Us</h1>
+        <p>We'd love to hear about your AI needs and discuss how Atreus AI can help.</p>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section class="contact-form-section">
         <div class="container">
-            <h1>Contact Us</h1>
-            <p>Fill out the form below, and we’ll get back to you with pricing and consultation details.</p>
+            <div class="row">
+                <!-- Contact Form -->
+                <div class="col-lg-6">
+                    <div class="contact-form-box">
+                        <h2>Contact Us</h2>
+                        <p>Fill out the form below, and we’ll get back to you with pricing and consultation details.</p>
 
-            <form action="submit_form.php" method="POST" class="contact-form">
-                <!-- Name -->
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" required>
+                        <form action="submit_form.php" method="POST" class="contact-form">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="company" class="form-label">Company Name (Optional)</label>
+                                <input type="text" id="company" name="company" class="form-control" placeholder="Your company name">
+                            </div>
+
+                            <!-- Services Interested In -->
+                            <div class="form-group">
+                                    <label for="services">What services are you interested in?</label>
+                                <div class="service-options">
+                                    <label><input type="checkbox" name="services[]" value="AI Consulting for Automation & Efficiency"> AI Consulting for Automation & Efficiency</label>
+                                    <label><input type="checkbox" name="services[]" value="Chatbot Creation & Customization"> Chatbot Creation & Customization</label>
+                                    <label><input type="checkbox" name="services[]" value="AI-Driven Business Efficiency & Workflow Automation"> AI-Driven Business Efficiency & Workflow Automation</label>
+                                    <label><input type="checkbox" name="services[]" value="AI for Marketing & Content Creation"> AI for Marketing & Content Creation</label>
+                                    <label><input type="checkbox" name="services[]" value="Custom AI Solutions & Business Strategy"> Custom AI Solutions & Business Strategy</label>
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Additional Details</label>
+                                <textarea id="message" name="message" class="form-control" rows="5" placeholder="Tell us more about your needs..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                        </form>
+                    </div>
                 </div>
 
-                <!-- Email -->
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+                <!-- Contact Info & Image -->
+                <div class="col-lg-6">
+                    <div class="contact-image-box">
+                        <img src="images/LogoTaglineNOB.png" alt="AI Consultation" class="contact-img">
+                        <h3>Have Questions?</h3>
+                        <p>Email us at: <a href="mailto:atreusconsultinggroup@gmail.com">atreusconsultinggroup@gmail.com</a></p>
+                        <p>Call us at: <strong>+1 763-496-8120</strong></p>
+                    </div>
                 </div>
-
-                <!-- Company (Optional) -->
-                <div class="form-group">
-                    <label for="company">Company Name (Optional)</label>
-                    <input type="text" id="company" name="company" class="form-control" placeholder="Your company name">
-                </div>
-
-                <!-- Services Interested In -->
-                <div class="form-group">
-                    <label for="services">What services are you interested in?</label>
-                    <select id="services" name="services" class="form-control" required>
-                        <option value="" disabled selected>Select a service</option>
-                        <option value="AI Training & Education">AI Training & Education</option>
-                        <option value="AI Automation & Workflow Optimization">AI Automation & Workflow Optimization</option>
-                        <option value="Custom AI Solutions & Integrations">Custom AI Solutions & Integrations</option>
-                        <option value="General Consultation">General Consultation</option>
-                    </select>
-                </div>
-
-                <!-- Message Box -->
-                <div class="form-group">
-                    <label for="message">Additional Details</label>
-                    <textarea id="message" name="message" class="form-control" rows="5" placeholder="Tell us more about your needs..."></textarea>
-                </div>
-
-                <!-- Submit Button -->
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
+            </div>
         </div>
     </section>
 

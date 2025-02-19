@@ -405,6 +405,79 @@ header {
     color: #007bff;
     margin-right: 10px;
 }
+
+/* Contact Hero Section */
+.contact-hero {
+    background: url('images/contact-bg.jpg') center/cover no-repeat;
+    color: #007bff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    background-color: #1a1a1a;
+    padding: 80px 0;
+    color: #ddd;
+}
+
+.contact-form-box {
+    background: #222;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.contact-image-box {
+    text-align: center;
+}
+
+.contact-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+/* Gray Banner Section */
+.contact-header {
+    background-color: #2a2a2a; /* Dark Gray */
+    text-align: center;
+    padding: 50px 0;
+}
+
+.contact-header h1 {
+    color: white; /* White Text */
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.contact-header p {
+    color: #ddd; /* Lighter gray text */
+    font-size: 18px;
+    margin-top: 10px;
+}
+.service-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.service-options label {
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.service-options input {
+    width: 16px;
+    height: 16px;
+    accent-color: #007bff; /* Blue highlight */
+}
+
+
 /* Founder Card */
 .founder-card {
     display: flex;

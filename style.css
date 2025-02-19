@@ -522,3 +522,93 @@ header {
 .founder-info a:hover {
     text-decoration: underline;
 }
+
+/* AI CONSULTING SERVICE PAGE */
+
+/* Section Background - Dark Gray */
+.ai-consulting-section {
+    background-color: #1a1a1a; /* Darker gray */
+    padding: 60px 0;
+}
+
+/* Card Container */
+.ai-services-container {
+    background-color: #222 !important; /* Slightly lighter gray box */
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* HEADER FIX - Force all text to be white */
+.ai-consulting-header {
+    color: white !important; /* Bright white text */
+    font-weight: bold;
+}
+
+/* FIX TAGLINE UNDER HEADER */
+.ai-consulting-section p {
+    color: rgba(255, 255, 255, 1) !important; /* Pure white */
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Service Cards */
+.ai-service-card {
+    background-color: #222;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    min-height: 340px; /* Ensuring all cards are equal in height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ai-service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #007bff;
+}
+
+/* Icons for Each Card */
+.ai-service-icon {
+    font-size: 40px;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+/* 🔥 Remove White Box from CTA */
+.ai-consulting-cta {
+    background-color: #1a1a1a !important; /* Ensures dark background */
+    color: white !important;
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    width: 80%;
+    margin: 40px auto;
+    border: none;
+}
+
+/* 🛑 Fix CTA Inner Container */
+.ai-consulting-cta-container {
+    background-color: transparent !important; /* Nukes any white box */
+    padding: 0 !important;
+    margin: 0 auto !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* 🚨 Remove Any Extra Backgrounds Inside CTA */
+.ai-consulting-cta-container * {
+    background-color: transparent !important;
+}
+
+/* 🚨 Make Sure Section Matches Everything */
+.ai-consulting-section {
+    background-color: #1a1a1a !important;
+}

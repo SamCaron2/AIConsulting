@@ -50,6 +50,7 @@
 
 
     <!-- Contact Section -->
+    <!-- Contact Section -->
     <section class="contact-form-section">
         <div class="container">
             <div class="row">
@@ -58,47 +59,44 @@
                     <div class="contact-form-box">
                         <h2>Contact Us</h2>
                         <p>Fill out the form below, and we’ll get back to you with pricing and consultation details.</p>
-    
-                        <!-- Success Message (Displays if form is successfully submitted) -->
-                        <?php if (isset($_GET['success']) && $_GET['success'] == "true"): ?>
-                            <p class="alert alert-success">✅ Thank you! Your message has been sent successfully.</p>
-                        <?php endif; ?>
-    
-                        <form action="submit_form.php" method="POST" class="contact-form">
+
+                        <form name="submit-to-google-sheet">
                             <div class="mb-3">
                                 <label for="name" class="form-label">Full Name</label>
-                                <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" required>
+                                <input type="text" name="name" class="form-control" placeholder="Enter your full name" required>
                             </div>
-    
+                        
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email Address</label>
-                                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+                                <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
                             </div>
-    
+                        
                             <div class="mb-3">
                                 <label for="company" class="form-label">Company Name (Optional)</label>
-                                <input type="text" id="company" name="company" class="form-control" placeholder="Your company name">
+                                <input type="text" name="company" class="form-control" placeholder="Your company name">
                             </div>
-    
-                            <!-- Services Interested In (Multi-Checkbox Selection) -->
-                            <div class="mb-3">
-                                <label for="services" class="form-label">What services are you interested in?</label>
+                        
+                            <!-- Services Interested In -->
+                            <div class="form-group">
+                                <label for="services">What services are you interested in?</label>
                                 <div class="service-options">
-                                    <label><input type="checkbox" name="services[]" value="AI Consulting for Automation & Efficiency"> AI Consulting for Automation & Efficiency</label><br>
-                                    <label><input type="checkbox" name="services[]" value="Chatbot Creation & Customization"> Chatbot Creation & Customization</label><br>
-                                    <label><input type="checkbox" name="services[]" value="AI-Driven Business Efficiency & Workflow Automation"> AI-Driven Business Efficiency & Workflow Automation</label><br>
-                                    <label><input type="checkbox" name="services[]" value="AI for Marketing & Content Creation"> AI for Marketing & Content Creation</label><br>
-                                    <label><input type="checkbox" name="services[]" value="Custom AI Solutions & Business Strategy"> Custom AI Solutions & Business Strategy</label>
+                                    <label><input type="checkbox" name="services" value="AI Consulting for Automation & Efficiency"> AI Consulting for Automation & Efficiency</label><br>
+                                    <label><input type="checkbox" name="services" value="Chatbot Creation & Customization"> Chatbot Creation & Customization</label><br>
+                                    <label><input type="checkbox" name="services" value="AI-Driven Business Efficiency & Workflow Automation"> AI-Driven Business Efficiency & Workflow Automation</label><br>
+                                    <label><input type="checkbox" name="services" value="AI for Marketing & Content Creation"> AI for Marketing & Content Creation</label><br>
+                                    <label><input type="checkbox" name="services" value="Custom AI Solutions & Business Strategy"> Custom AI Solutions & Business Strategy</label>
                                 </div>
                             </div>
-    
+                        
                             <div class="mb-3">
                                 <label for="message" class="form-label">Additional Details</label>
-                                <textarea id="message" name="message" class="form-control" rows="5" placeholder="Tell us more about your needs..."></textarea>
+                                <textarea name="message" class="form-control" rows="5" placeholder="Tell us more about your needs..."></textarea>
                             </div>
-    
+                        
                             <button type="submit" class="btn btn-primary w-100">Send Message</button>
                         </form>
+                        
+                        <span id="msg"></span> <!-- Success message -->
                     </div>
                 </div>
 
@@ -150,7 +148,7 @@
             </div>
         </div>
     </footer>
-
+    
     <!-- JS File -->
     <script src="script.js"></script>
 </body>

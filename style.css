@@ -561,17 +561,30 @@ header {
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    min-height: 340px; /* Ensuring all cards are equal in height */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    min-height: 400px; /* Ensuring all cards are equal in height */
+    height: 100%; /* Forces cards to stretch evenly */
+    position: relative;
+    overflow: hidden;
 }
 
+/* Hover Effect - Glowing Outline */
 .ai-service-card:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px #007bff;
+}
+
+/* Fix Text Alignment Inside Cards */
+.ai-service-card p {
+    flex-grow: 1; /* Makes all text adjust evenly */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 /* Icons for Each Card */
@@ -580,35 +593,41 @@ header {
     color: #007bff;
     margin-bottom: 15px;
 }
-
-/* 🔥 Remove White Box from CTA */
+/* Call to Action - Styled as a Card */
+/* Call to Action - Full Width */
 .ai-consulting-cta {
-    background-color: #1a1a1a !important; /* Ensures dark background */
-    color: white !important;
-    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+    background: #1a1a1a;
+    width: 100%;
+}
+
+/* Make CTA Card Match Service Container Width */
+.cta-card {
+    background-color: #222;
+    color: white;
     text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 30px;
     border-radius: 10px;
-    width: 80%;
-    margin: 40px auto;
-    border: none;
+    box-shadow: 0px 0px 15px rgba(0, 123, 255, 0.5);
+    width: 100%; /* Makes it as wide as the container */
+    max-width: 1200px; /* Matches services container width */
+    margin: 0 auto; /* Centers it */
 }
 
-/* 🛑 Fix CTA Inner Container */
-.ai-consulting-cta-container {
-    background-color: transparent !important; /* Nukes any white box */
-    padding: 0 !important;
-    margin: 0 auto !important;
-    border: none !important;
-    box-shadow: none !important;
+
+/* CTA Button */
+.cta-card .btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
 }
 
-/* 🚨 Remove Any Extra Backgrounds Inside CTA */
-.ai-consulting-cta-container * {
-    background-color: transparent !important;
-}
-
-/* 🚨 Make Sure Section Matches Everything */
-.ai-consulting-section {
-    background-color: #1a1a1a !important;
+.cta-card .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
 }

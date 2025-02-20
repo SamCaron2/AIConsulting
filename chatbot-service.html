@@ -42,16 +42,37 @@
                 <li><a href="contact.html">Contact Us</a></li> <!-- Link to Contact Page -->
             </ul>
         </nav>
+        <!-- Mobile Header (Hidden on Desktop) -->
         <div class="mobile-header">
             <a href="index.html" class="logo-link">
                 <img src="images/cleaned_image.png" alt="AI Consulting Logo" class="logo">
             </a>
-            <span class="brand-name">Atreus Consulting</span>
+            <span class="mobile-brand-name">Atreus Consulting</span> <!-- Adds back branding -->
             <button class="menu-toggle" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
+    
+        <!-- Mobile Navigation (Hidden by Default) -->
+        <nav class="mobile-nav">
+            <ul class="mobile-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Services &#9662;</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ai-consulting.html">AI Consulting & Automation</a></li>
+                        <li><a href="chatbot-service.html">Chatbot Creation & Customization</a></li>
+                        <li><a href="ai-business-efficiency.html">AI for Business Efficiency</a></li>
+                        <li><a href="ai-marketing.html">AI for Marketing & Content</a></li>
+                        <li><a href="ai-custom.html">Custom AI Solutions</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
     </header>
+    
 
 <!-- Chatbot Creation -->
 <section class="ai-consulting-section">

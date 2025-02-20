@@ -727,3 +727,40 @@ header {
     background-color: #0056b3;
     transform: scale(1.05);
 }
+/* Hero Section */
+.hero-section {
+    background-color: #1a1a1a; /* Dark background */
+    color: white;
+    padding: 80px 0;
+    text-align: left;
+}
+
+/* Hero Image Fix */
+.hero-img {
+    width: 100%;
+    max-width: 500px; /* Prevents stretching on large screens */
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 123, 255, 0.5);
+}
+
+/* Make sure text aligns correctly */
+.hero-section h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.hero-section p {
+    font-size: 18px;
+    color: #ddd;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+    }
+    
+    .hero-img {
+        max-width: 90%; /* Makes sure the image fits on smaller screens */
+    }
+}

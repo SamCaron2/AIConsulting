@@ -35,7 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     const scriptURL = 'https://script.google.com/macros/s/AKfycbw-NwHAtB_rRmxqXgUN921TavvIVfONjMHzlF4ygOyFlcjDYwRIyvNC1DQCl9O_RZ3S_w/exec'; 
     const form = document.forms['submit-to-google-sheet'];
-    const msg = document.getElementById("msg");
+    const successModal = document.getElementById("successModal");
+    const closeModal = document.getElementById("closeModal");
 
     form.addEventListener('submit', e => {
         e.preventDefault();
@@ -46,31 +47,36 @@ document.addEventListener("DOMContentLoaded", function () {
             selectedServices.push(checkbox.value);
         });
 
-        // Debugging: Ensure selected services are logged
-        console.log("Selected Services:", selectedServices);
-
-        // Ensure FormData is populated correctly
         let formData = new FormData(form);
-        formData.set("services", selectedServices.join(", ")); // Convert to comma-separated string
+        formData.set("services", selectedServices.join(", "));
 
         fetch(scriptURL, { method: 'POST', body: formData })
-            .then(response => response.text()) // Ensure response is processed as text
+            .then(response => response.text())
             .then(data => {
                 console.log("Response from Server:", data);
                 if (data.trim() === "Success") {
-                    msg.innerHTML = "Message sent successfully!";
-                    setTimeout(() => { msg.innerHTML = ""; }, 5000);
+                    successModal.style.display = "flex"; // Show modal
+
+                    setTimeout(() => {
+                        successModal.style.display = "none"; // Auto-close after 3 sec
+                    }, 3000);
+
                     form.reset();
                 } else {
-                    msg.innerHTML = "Error: " + data;
+                    alert("Error: " + data);
                 }
             })
             .catch(error => {
                 console.error('Error!', error);
-                msg.innerHTML = "Submission failed. Please try again.";
+                alert("Submission failed. Please try again.");
             });
     });
+
+    closeModal.addEventListener("click", () => {
+        successModal.style.display = "none";
+    });
 });
+
 
 
 

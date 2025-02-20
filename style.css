@@ -764,3 +764,97 @@ header {
         max-width: 90%; /* Makes sure the image fits on smaller screens */
     }
 }
+
+/* HEADER FIX */
+.ai-header {
+    background-color: #2a2a2a; /* Dark Gray */
+    padding: 10px 0;
+    color: white;
+}
+
+.logo {
+    max-height: 60px; /* Ensures logo scales properly */
+    width: auto;
+}
+
+.tagline {
+    font-size: 14px;
+    font-style: italic;
+    color: #ddd;
+}
+
+/* NAVIGATION FIX */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+/* Dropdown Fix */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #333;
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* RESPONSIVE FIXES */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tagline {
+        display: none; /* Hide tagline on small screens */
+    }
+
+    .logo {
+        max-height: 50px;
+    }
+
+    .nav-menu li {
+        margin: 5px;
+    }
+}
+/* Default Hero Image */
+.hero-img {
+    content: url('images/hero-image.jpg'); /* Main image */
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 123, 255, 0.5);
+}
+
+/* Alternative Image for Laptops (Less than 1200px width) */
+@media (max-width: 1200px) {
+    .hero-img {
+        content: url('images/LaptopHeroMain.jpg'); /* Alternative image */
+    }
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .hero-img {
+        content: url('images/hero-mobile.jpg'); /* Mobile-optimized image */
+        max-width: 90%;
+    }
+}

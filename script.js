@@ -76,6 +76,10 @@ document.addEventListener("DOMContentLoaded", function () {
         successModal.style.display = "none";
     });
 });
+function toggleMenu() {
+    document.querySelector('.nav-menu').classList.toggle('active');
+}
+
 
 
 

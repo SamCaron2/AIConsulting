@@ -851,10 +851,272 @@ header {
     }
 }
 
-/* Mobile Optimization */
+
+/* Hero Section - Mobile Optimization */
 @media (max-width: 768px) {
+    .hero-section {
+        text-align: center; /* Center everything */
+        padding: 50px 20px; /* Reduce padding */
+    }
+
+    .hero-section h1 {
+        font-size: 28px; /* Smaller text */
+        margin-bottom: 15px;
+    }
+
+    .hero-section p {
+        font-size: 16px;
+    }
+
     .hero-img {
-        content: url('images/hero-mobile.jpg'); /* Mobile-optimized image */
+        max-width: 80%; /* Make sure image scales properly */
+        margin-top: 20px;
+    }
+}
+
+
+/* --- MOBILE RESPONSIVENESS FIXES --- */
+@media (max-width: 768px) {
+    /* General Fixes */
+    body {
+        font-size: 16px; /* Adjust global font for readability */
+    }
+
+    /* Header & Navigation */
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .logo-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .brand-name {
+        font-size: 22px;
+        margin-top: 5px;
+    }
+
+    .tagline {
+        font-size: 14px;
+        margin-top: -5px;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        text-align: center;
+        padding: 40px 15px;
+    }
+
+    .hero-section h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .hero-section p {
+        font-size: 16px;
+    }
+
+    .hero-img {
         max-width: 90%;
+        margin-top: 15px;
+    }
+
+    /* Service Cards */
+    .ai-service-card {
+        padding: 20px;
+        min-height: auto;
+    }
+
+    .ai-service-card p {
+        font-size: 16px;
+    }
+
+    /* Call to Action (CTA) */
+    .ai-consulting-cta {
+        width: 90%;
+        padding: 40px 15px;
+        text-align: center;
+    }
+
+    .cta-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cta-card h2 {
+        font-size: 22px;
+    }
+
+    .cta-card p {
+        font-size: 16px;
+    }
+
+    .cta-card .btn {
+        width: 100%;
+    }
+
+    /* Metrics Section */
+    .metrics .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .metric-box {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* AI Adoption Section */
+    .ai-adoption-section {
+        text-align: center;
+    }
+
+    .ai-adoption-img {
+        max-width: 90%;
+        margin: 15px auto;
+    }
+
+    .ai-adoption-content {
+        text-align: center;
+        padding: 0;
+    }
+
+    .ai-adoption-content h2 {
+        font-size: 22px;
+    }
+
+    /* Testimonials */
+    .testimonials {
+        padding: 50px 15px;
+    }
+
+    .testimonials .card {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    /* Footer */
+    .footer {
+        text-align: center;
+    }
+
+    .footer .container {
+        flex-direction: column;
+    }
+
+    .footer-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+/* --- Mobile Header (Only for Small Screens) --- */
+@media (max-width: 768px) {
+    .mobile-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #343232;
+        padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    /* Logo in the top-left */
+    .logo-link .logo {
+        width: 50px;
+        height: auto;
+    }
+
+    /* Centered Brand Name */
+    .brand-name {
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        flex-grow: 1;
+    }
+
+    /* Hamburger Menu Button */
+    .menu-toggle {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    /* Hide Desktop Navigation */
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background: #222;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Show Mobile Menu When Active */
+    .nav-menu.active {
+        display: flex;
+    }
+
+    /* Mobile Dropdown Styling */
+    .dropdown-menu {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        text-align: center;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: flex;
+    }
+}
+
+/* --- Keep Original Desktop Header Unchanged --- */
+@media (min-width: 769px) {
+    .mobile-header {
+        display: none; /* Hide mobile header on large screens */
+    }
+
+    .nav-menu {
+        display: flex !important; /* Ensure desktop menu stays visible */
+        justify-content: space-between;
     }
 }
